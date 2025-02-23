@@ -15,7 +15,14 @@ while(num>9){
         num/=10;  
     }
     num=sum;
+   
     
 }
+if(num==5){
+    cout<<" cheerful \n";
+
+  }else{
+      cout<<"Not cheerful \n";
+  }
 return 0;
 }
