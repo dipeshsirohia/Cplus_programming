@@ -56,29 +56,61 @@
 // 33. Check if Number is Binary Palindrome 
 //  Input: 9 → Binary: 1001 → Palindrome → Output: Yes 
 
-# include <bits/stdc++.h>
-using namespace std;
-bool binaryPalindrome(int num){
-    string sum="";
-    while(num!=0){
-        int temp = num%2;
-        sum= to_string(temp)+sum;
-        num/=2;
-    }
-    int i=0;
-    int j=sum.size()-1;
-    cout<<sum<<endl;
-    while(i<j){
-        if(sum[i]!=sum[j]){
-            return false;
-        }
-        i++;
-        j--;
-    }
-    return true;
-}
-int main()
-{
-cout<<binaryPalindrome(90);
-return 0;
-}
+// # include <bits/stdc++.h>
+// using namespace std;
+// bool binaryPalindrome(int num){
+//     string sum="";
+//     while(num!=0){
+//         int temp = num%2;
+//         sum= to_string(temp)+sum;
+//         num/=2;
+//     }
+//     int i=0;
+//     int j=sum.size()-1;
+//     cout<<sum<<endl;
+//     while(i<j){
+//         if(sum[i]!=sum[j]){
+//             return false;
+//         }
+//         i++;
+//         j--;
+//     }
+//     return true;
+// }
+// int main()
+// {
+// cout<<binaryPalindrome(90);
+// return 0;
+// }
+
+// 32. Count Total Bits Set to 1 in Binary 
+//  Input: 13 → Binary: 1101 → Output: 3 
+
+// # include <bits/stdc++.h>
+// using namespace std;
+// int onebitcount(int num){
+//     string sum="";
+//     while(num!=0){
+//         int temp = num%2;
+//         sum= to_string(temp)+sum;
+//         num/=2;
+//     }
+//     int i=0;
+//     int j=sum.size();
+//     cout<<sum<<endl;
+//     int count=0;
+//     while(i<j){
+//         if(sum[i]=='1'){
+//             count++;
+//         }
+//         i++;
+        
+//     }
+//     return count;
+// }
+// int main()
+// {
+// cout<<onebitcount(9);
+// return 0;
+// }
+
