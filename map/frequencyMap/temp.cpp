@@ -13,8 +13,8 @@ cout<<a<<b<<" ";
 for(int i=2;i<=n;i++){
    cout<<c<<" ";
    
-   a=b;
-   b=c;
+  a=b;
+  b=c;
   c=a+b;
 }
 return 0;
