@@ -239,11 +239,67 @@
 // Input: arr = [3, 3, 4, 2, 4, 4, 2, 4, 4]
 
 // Output: Majority Element: 4
+ # include <bits/stdc++.h>
+ using namespace std;
+ int majorityElement(int arr[],int n){
+      int candidate = -1,votes=0;
+      for(int i=0;i<n;i++){
+          if(votes==0){
+            candidate=arr[i];
+            votes=1;
+          }
+          else{
+            if(arr[i]==candidate){
+                  votes++;
+            }else{
+                  votes--;
+            }
+          }
 
+      }
+     
+    int  count=0;
+    for(int i=0;i<n;i++){
+      if(arr[i]==candidate){
+            count++;
+      }
+    }
+
+    if(count>n/2){
+      return candidate;
+    }
+   return -1;
+ }
+ int main()
+ {
+ int arr[]={3, 3, 4, 2, 4, 4, 2, 4, 4};
+ int n=9;
+cout<<majorityElement(arr,n);
+ return 0;
+ }
 
 // 10. Find the Product of Array Except Self: Write a program to find the product of all elements in an array except the current element.
 
 // Input: arr = [1, 2, 3, 4]
 
 // Output: 24 12 8 6
-
+   # include <bits/stdc++.h>
+   using namespace std;
+   void productExceptSelf(int arr[],int n){
+      for(int i=0;i<n;i++){
+            int product=1;
+            for(int j=0;j<n;j++){
+                if(j==i){
+                  continue;
+                }
+                product*=arr[j];
+            }
+            cout<<product<<" ";
+      }
+   }
+   int main()
+   {
+    int arr[]={1,2,3,4};
+    productExceptSelf(arr,4); 
+   return 0;
+   }
